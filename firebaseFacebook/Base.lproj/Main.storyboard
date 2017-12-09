@@ -18,14 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbrcolorsOnly" translatesAutoresizingMaskIntoConstraints="NO" id="n8c-1M-Nay">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomeNewBuss" translatesAutoresizingMaskIntoConstraints="NO" id="9e6-DU-9M5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="699"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbrcolorsOnly" translatesAutoresizingMaskIntoConstraints="NO" id="n8c-1M-Nay">
                                 <rect key="frame" x="123" y="64" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="6ZS-L8-rdB"/>
                                     <constraint firstAttribute="width" constant="128" id="uQd-Gp-o1B"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-FL-d9V">
+                            <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-FL-d9V">
                                 <rect key="frame" x="16" y="345.5" width="343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="uug-yo-Rtl"/>
@@ -34,14 +37,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2qi-QM-Lt8">
+                            <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2qi-QM-Lt8">
                                 <rect key="frame" x="16" y="393" width="343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="xEB-3y-qck"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="567-A3-9p5">
                                 <rect key="frame" x="16" y="441" width="343" height="40"/>
@@ -67,6 +70,9 @@
                                 <state key="normal" title="Ingresar con Facebook">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iV9-kr-39D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1Z-ZJ-lgg">
                                 <rect key="frame" x="16" y="617" width="343" height="30"/>
@@ -76,7 +82,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11698932200670242" green="0.1323675811290741" blue="0.18215754628181458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="n8c-1M-Nay" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="2Ae-wM-Oae"/>
                             <constraint firstItem="567-A3-9p5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4Zj-8w-mv9"/>
@@ -96,11 +102,15 @@
                             <constraint firstItem="HdO-FL-d9V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bZP-fv-OQW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E1Z-ZJ-lgg" secondAttribute="bottom" constant="20" id="bx8-L7-28B"/>
                             <constraint firstItem="otI-HD-QLe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="f4k-cz-XpK"/>
+                            <constraint firstItem="9e6-DU-9M5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-16" id="h79-69-b90"/>
                             <constraint firstItem="HdO-FL-d9V" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="l25-oR-FRr"/>
+                            <constraint firstItem="9e6-DU-9M5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="l80-T1-4vp"/>
                             <constraint firstItem="567-A3-9p5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ltV-iG-0kM"/>
+                            <constraint firstItem="9e6-DU-9M5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="32" id="nxz-3H-CH9"/>
                             <constraint firstItem="n8c-1M-Nay" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="onc-AY-EZ2"/>
                             <constraint firstItem="2qi-QM-Lt8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qI7-mp-KCY"/>
                             <constraint firstItem="2qi-QM-Lt8" firstAttribute="top" secondItem="HdO-FL-d9V" secondAttribute="bottom" constant="8" id="tuR-gs-SCo"/>
+                            <constraint firstItem="9e6-DU-9M5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zcV-Ec-nuj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -109,12 +119,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="email" destination="HdO-FL-d9V" id="v3S-aG-QXd"/>
+                        <outlet property="facebookBtn" destination="otI-HD-QLe" id="qPg-MX-19U"/>
+                        <outlet property="ingresarBtn" destination="567-A3-9p5" id="3cE-yv-a8J"/>
                         <outlet property="password" destination="2qi-QM-Lt8" id="9fM-1P-iQT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="134"/>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
         <!--BeBeer-->
         <scene sceneID="jvp-7K-FRX">

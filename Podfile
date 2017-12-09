@@ -8,5 +8,6 @@ target 'firebaseFacebook' do
   # Pods for firebaseFacebook
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
-
+pod 'FacebookCore'
+pod 'FacebookLogin'
 end
