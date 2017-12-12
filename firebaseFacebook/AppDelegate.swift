@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         if UserDefaults.standard.string(forKey: "email") != nil {
-            
+            print(UserDefaults.standard.string(forKey: "email")!)
             let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewControlleripad : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)

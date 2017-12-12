@@ -15,11 +15,17 @@ class SingUpViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var registrarmeBtn: UIButton!
+    
+     var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
+        registrarmeBtn.layer.cornerRadius = 12
+        
+        
     }
 
     @IBAction func createAccountAction(_ sender: AnyObject) {
@@ -34,7 +40,9 @@ class SingUpViewController: UIViewController {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 if error == nil {
                     print("You have successfully signed up")
-                     UserDefaults.standard.setValue(self.emailTextField.text!, forKey:"email")
+                    self.ref.child("users").child((user?.uid)!).setValue(["email": self.emailTextField.text,
+                                                                          "password": self.passwordTextField.text])
+                    UserDefaults.standard.setValue(self.emailTextField.text!, forKey:"email")
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "profile1")
                     self.present(vc!, animated: true, completion: nil)
                     

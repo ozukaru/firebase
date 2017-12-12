@@ -222,6 +222,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="bgR-CI-4pW" id="H16-IB-OPj"/>
                         <outlet property="passwordTextField" destination="kce-XN-g8O" id="lj1-SY-F6I"/>
+                        <outlet property="registrarmeBtn" destination="hbC-TP-lFk" id="ViN-l9-0PC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZy-Gj-1OB" userLabel="First Responder" sceneMemberID="firstResponder"/>
